@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> 
+    
+</head>
+<body>
+<div class="top">
+    <h1>Top</h1>
+</div>
+<div id="main">
+    <div class="left">
+        <h2 class="Counter"> Counter </h2>
+        <p id="count"> 0 </p>
+        <input type="image" id="cookie" onclick=buttonCount() src="/clicker-project/images/cookie.png" height="180" width="180"></input>
+    </div>
+    <div class="middle">
+    <h2 class="stats"> Stats </h2>
+    <p id="amount">You have clicked a total of 0 times</p>
+    </div>
+    <div class="right">
+    <h2 class="upgrades"> Upgrades </h2>
+        <div class="upgrade-1">
+            <div class="upgrade-1-details">
+                <p id="multiplier">Multiplier: 1</p>
+                <p id="current">Next Upgrade: 100</p>
+            </div>
+            <input type="image" id="click-upgrade" onclick=countMultiplier() src="/clicker-project/images/click.png" height="80" width="80"></input>
+        </div>
+        <div class="upgrade-2">
+        <input type="image" id="auto-click" onclick=autoClicker() src="/clicker-project/images/gnome.png" height="100" width="100"></input>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

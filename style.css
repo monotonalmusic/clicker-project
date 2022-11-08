@@ -1,0 +1,54 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.top {
+    border: solid 3px brown;
+    background-color: lightgreen;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    background-color: burlywood;
+    border: solid 3px brown;
+    width: 25%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.middle {
+    background-color: burlywood;
+    border: solid 3px brown;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.right {
+    background-color: burlywood;
+    border: solid 3px brown;
+    width: 25%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.upgrade-1 {
+    display: flex;
+    justify-content: space-between;
+
+}
