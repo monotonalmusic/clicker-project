@@ -11,29 +11,59 @@
 </head>
 <body>
 <div class="top">
-    <h1>Top</h1>
+    <h1>COOKIE CLICKER</h1>
 </div>
 <div id="main">
     <div class="left">
-        <h2 class="Counter"> Counter </h2>
-        <p id="count"> 0 </p>
-        <input type="image" id="cookie" onclick=buttonCount() src="/clicker-project/images/cookie.png" height="180" width="180"></input>
+        <div class="titles">
+            <h2> Counter </h2>
+        </div>
+        <p><span id="count"> 0 </span> cookies! </p>
+        <input type="image" id="cookie" onclick=buttonCount() src="/clicker-project/images/cookie.png" height="200" width="200"></input>
     </div>
     <div class="middle">
-    <h2 class="stats"> Stats </h2>
-    <p id="amount">You have clicked a total of 0 times</p>
+        <div class="titles">
+            <h2> Stats </h2>
+        </div>
+    <p>You have produced <span id="totalcount">0</span> cookies in total!</p>
+    <p>You have clicked a total of <span id="amount">0</span> times!</p>
+    <p>Your gnomes have baked <span id="autocount"> 0</span> cookies!</p>
+    <p>Your Grandma's have baked <span id="grandmacount">0</span> cookies!</p>
     </div>
     <div class="right">
-    <h2 class="upgrades"> Upgrades </h2>
+        <div class="titles">
+            <h2> Upgrades </h2>
+        </div>
+        <!-- <button id="cheat" onclick=cheat()>cheat</button> -->
         <div class="upgrade-1">
             <div class="upgrade-1-details">
-                <p id="multiplier">Multiplier: 1</p>
-                <p id="current">Next Upgrade: 100</p>
+                <p>Multiplier: <span id="multiplier">1</span></p>
+                <p>Next upgrade: <span id="current">50</span> cookies</p>
             </div>
-            <input type="image" id="click-upgrade" onclick=countMultiplier() src="/clicker-project/images/click.png" height="80" width="80"></input>
+            <div>
+                <input type="image" id="click-upgrade" onclick=countMultiplier() src="/clicker-project/images/click.png" height="80" width="80"></input>
+            </div>
         </div>
-        <div class="upgrade-2">
-        <input type="image" id="auto-click" onclick=autoClicker() src="/clicker-project/images/gnome.png" height="100" width="100"></input>
+        <div class="upgrade-2 full-bleed">
+            <div class="upgrade-2-details">
+            <p>Gnomes: <span id="autonum">0</span></p>
+            <p>Next gnome: <span id="current2">100</span> cookies</p>
+            </div>
+            <input type="image" id="auto-click" onclick=autoClicker() src="/clicker-project/images/gnome.png" height="80" width="80"></input>
+        </div>
+        <div class="upgrade-3">
+            <div class="upgrade-3-details">
+                <p>Grandmas: <span id="grandmas">0</span></p>
+                <p>Next grandma: <span id="grandma-cost">300</span> cookies</p>
+            </div>
+            <input type="image" id="grandma" onclick=grandmaClicker() src="/clicker-project/images/grandma.png" height="100" width="80"></input>
+        </div>
+        <div class="upgrade-4">
+            <div class="upgrade-4-details">
+                <p>Roll the dice!</p>
+                <p>Cost: <span>10000</span> cookies</p>
+            </div>
+            <input type="image" id="lotto" onclick=lottery() src="/clicker-project/images/chest.png" height="100" width="100"></input>
         </div>
     </div>
 </div>

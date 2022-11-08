@@ -4,9 +4,22 @@ body, html {
     width: 100%;
 }
 
+span {
+    font-weight: bold;
+}
+
+.titles {
+    background-color: rosybrown;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    border: inset 2px #654321;
+}
+
 .top {
-    border: solid 3px brown;
-    background-color: lightgreen;
+    border: inset 1px #654321;
+    background-color: green;
     justify-content: center;
     text-align: center;
     margin-top: 0;
@@ -22,7 +35,7 @@ body, html {
 
 .left {
     background-color: burlywood;
-    border: solid 3px brown;
+    border: inset 2px #654321;
     width: 25%;
     display: flex;
     flex-flow: column;
@@ -31,7 +44,7 @@ body, html {
 
 .middle {
     background-color: burlywood;
-    border: solid 3px brown;
+    border: inset 2px #654321;
     width: 50%;
     display: flex;
     flex-flow: column;
@@ -40,15 +53,80 @@ body, html {
 
 .right {
     background-color: burlywood;
-    border: solid 3px brown;
+    border: inset 2px #654321;
+    /* padding: 8px; */
     width: 25%;
     display: flex;
     flex-flow: column;
     align-items: center;
+    overflow: auto;
 }
 
 .upgrade-1 {
     display: flex;
     justify-content: space-between;
+    overflow: auto;
+    width: 351px;
+    padding-left: 10px;
+    padding-right: 5px;
+    background-color: bisque;
+    border: inset 1px #654321;
 
+}
+
+.upgrade-1-details {
+    display: flex;
+    flex-flow: column;
+    justify-content: left;
+}
+
+.upgrade-2 {
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    width: 351px;
+    padding-left: 10px;
+    padding-right: 5px;
+    border: inset 1px #654321;
+
+}
+
+
+/* Adds a fixed background width */
+/* .full-bleed {
+    box-shadow: 0 0 0 50px green;
+    clip-path: inset(0 -100vmax); 
+  } */
+
+.upgrade-2-details {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.upgrade-3 {
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    width: 351px;
+    padding-left: 10px;
+    padding-right: 5px;
+    background-color: bisque;
+    border: inset 1px #654321;
+
+}
+.upgrade-4 {
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    width: 351px;
+    padding-left: 10px;
+    padding-right: 5px;
+    border: inset 1px #654321;
+
+}
+
+#cookie:hover {
+    height: 220;
+    width: 220;
 }
