@@ -3,18 +3,20 @@ let multiplier = 1
 let currentCost = 50
 let currentCost2 = 100 
 let currentCost3 = 300
+let lottocost = 10000
+//refers to click amount
 let amount = 0
+//gnome #
 let autoNumber = 0
 let autoCount = 0
+//grandma #
 let grandmaNumber = 0
 let grandmaCount = 0
-let clickCount = 0
 let totalCount = 0
-let lottocost = 10000
+
 
 function buttonCount() {
     count += (1 * multiplier)
-    clickCount += (1 * multiplier)
     totalCount += (1 * multiplier)
     amount ++
     update()
@@ -57,7 +59,7 @@ function autoClicker() {
     update()
     }
     else {
-        alert ("need more cookies!")
+        alert ("More cookies!")
     }
 }
 
@@ -70,7 +72,7 @@ function grandmaClicker() {
     update()
     }
     else {
-        alert ("need more cookies!")
+        alert ("More cookies!")
     }
 }
 
@@ -81,12 +83,14 @@ function cheat() {
 
 function lottery() {
     if (lottocost <= count) {
-    count += Math.floor(Math.random() * 20000)
+    let winnings = Math.floor(Math.random() * 20000)
+    count += winnings
+    alert ("You won " + winnings + " cookies in the lottery!")
     count = Math.round(count - lottocost)
     update()
     }
     else {
-        alert ("need more cookies!")
+        alert ("More cookies!")
     }
 }
 

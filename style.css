@@ -1,11 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@400;600;900;1000&display=swap');
+
 body, html {
     margin: 0;
     height: 100%;
     width: 100%;
 }
 
+h1,
+h2,
+span,
+p {
+    font-family: 'Cairo Play', cursive;
+}
+
+h1 {
+    font-weight: 1000;
+}
 span {
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .titles {
@@ -22,12 +34,17 @@ span {
     background-color: green;
     justify-content: center;
     text-align: center;
+    padding: 10px;
     margin-top: 0;
     margin-bottom: 0;
 }
 
+#reload {
+    background-color: rosybrown;
+}
+
 #main {
-    height: 100%;
+    height: 90%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -40,6 +57,9 @@ span {
     display: flex;
     flex-flow: column;
     align-items: center;
+    background-image: url(https://media2.giphy.com/media/fxBQb63BC2ttHfX0uN/giphy.gif?cid=ecf05e47icvijz1elsoughyttlcjhnim0jy2jrk4wc1a3o7i&rid=giphy.gif&ct=g);
+    background-position: center;
+    background-size: 250%;
 }
 
 .middle {
@@ -61,10 +81,26 @@ span {
     align-items: center;
     overflow: auto;
 }
+.upgrade-1,
+.upgrade-2,
+.upgrade-3,
+.upgrade-4 {
+    opacity:0.75;
+    transition: 1s ease;
+
+}
+.upgrade-1:hover,
+.upgrade-2:hover,
+.upgrade-3:hover,
+.upgrade-4:hover {
+    opacity:1;
+    transition: 1s ease;
+} 
 
 .upgrade-1 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     overflow: auto;
     width: 351px;
     padding-left: 10px;
@@ -73,6 +109,7 @@ span {
     border: inset 1px #654321;
 
 }
+
 
 .upgrade-1-details {
     display: flex;
@@ -83,6 +120,7 @@ span {
 .upgrade-2 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     overflow: auto;
     width: 351px;
     padding-left: 10px;
@@ -91,12 +129,6 @@ span {
 
 }
 
-
-/* Adds a fixed background width */
-/* .full-bleed {
-    box-shadow: 0 0 0 50px green;
-    clip-path: inset(0 -100vmax); 
-  } */
 
 .upgrade-2-details {
     display: flex;
@@ -107,6 +139,7 @@ span {
 .upgrade-3 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     overflow: auto;
     width: 351px;
     padding-left: 10px;
@@ -118,6 +151,7 @@ span {
 .upgrade-4 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     overflow: auto;
     width: 351px;
     padding-left: 10px;
