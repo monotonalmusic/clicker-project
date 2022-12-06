@@ -1,48 +1,49 @@
-let count = 0
-let multiplier = 1
-let currentCost = 50
-let currentCost2 = 100 
-let currentCost3 = 300
-let lottocost = 10000
+let currentCookies = 0
+let currentMultiplier = 1
+let multiCost = 50
+let gnomeCost = 100 
+let grandmaCost = 300
+let lottoCost = 10000
 //refers to click amount
-let amount = 0
+let clickAmount = 0
 //gnome #
-let autoNumber = 0
-let autoCount = 0
+let gnomeNumber = 0
+let gnomeCount = 0
 //grandma #
 let grandmaNumber = 0
 let grandmaCount = 0
-let totalCount = 0
+let totalProduced = 0
 
 
 function buttonCount() {
-    count += (1 * multiplier)
-    totalCount += (1 * multiplier)
-    amount ++
+    currentCookies += (1 * currentMultiplier)
+    totalProduced += (1 * currentMultiplier)
+    clickAmount ++
     update()
     
 }
 
-function moreCookies() {
-    count += (2 * autoNumber)
-    autoCount += (2 * autoNumber)
-    totalCount += (2 * autoNumber)
+function gnomeCookies() {
+    currentCookies += (2 * gnomeNumber)
+    gnomeCount += (2 * gnomeNumber)
+    totalProduced += (2 * gnomeNumber)
+    console.log(gnomeCount)
     update()
 }
 
 function grandmaCookies() {
-    count += (10 * grandmaNumber)
+    currentCookies += (10 * grandmaNumber)
     grandmaCount += (10 * grandmaNumber)
-    totalCount += (10 * grandmaNumber)
+    totalProduced += (10 * grandmaNumber)
     update()
     
 }
 
 function countMultiplier() {
-    if (currentCost <= count) {
-        multiplier ++
-        count = Math.round(count - currentCost)
-        currentCost = Math.round(currentCost * 1.5)
+    if (multiCost <= currentCookies) {
+        currentMultiplier ++
+        currentCookies = Math.round(currentCookies - multiCost)
+        multiCost = Math.round(multiCost * 1.5)
         update()
     }
     else {
@@ -50,13 +51,18 @@ function countMultiplier() {
     }
 }
 
-function autoClicker() {
-    if (currentCost2 <= count) {
-    autoNumber ++
-    count = Math.round(count - currentCost2)
-    currentCost2 = Math.round(currentCost2 * 1.75)
-    setInterval(moreCookies, 1000)
-    update()
+function gnomeClicker() {
+    console.log('hi')
+    autoClicker(gnomeCost, gnomeNumber, gnomeCookies)
+}
+
+function autoClicker(cost, number, cookies) {
+    if (cost <= currentCookies) {
+        number ++
+        currentCookies = Math.round(currentCookies - cost)
+        cost = Math.round(cost * 1.75)
+        setInterval(cookies, 1000)
+        update()
     }
     else {
         alert ("More cookies!")
@@ -64,10 +70,10 @@ function autoClicker() {
 }
 
 function grandmaClicker() {
-    if (currentCost3 <= count) {
+    if (grandmaCost <= currentCookies) {
     grandmaNumber ++
-    count = Math.round(count - currentCost3)
-    currentCost3 = Math.round(currentCost3 * 1.75)
+    currentCookies = Math.round(currentCookies - grandmaCost)
+    grandmaCost = Math.round(grandmaCost * 1.75)
     setInterval(grandmaCookies, 2000)
     update()
     }
@@ -77,16 +83,16 @@ function grandmaClicker() {
 }
 
 function cheat() {
-    count += 10000000
+    currentCookies += 100000
     update()
 }
 
 function lottery() {
-    if (lottocost <= count) {
+    if (lottoCost <= currentCookies) {
     let winnings = Math.floor(Math.random() * 20000)
-    count += winnings
+    currentCookies += winnings
     alert ("You won " + winnings + " cookies in the lottery!")
-    count = Math.round(count - lottocost)
+    currentCookies = Math.round(currentCookies - lottoCost)
     update()
     }
     else {
@@ -97,16 +103,17 @@ function lottery() {
 
 
 function update() {
-    document.getElementById('count').innerHTML = count; 
-    document.getElementById('amount').innerHTML = amount;
-    document.getElementById('multiplier').innerHTML = multiplier;
-    document.getElementById('current').innerHTML = currentCost;
-    document.getElementById('autonum').innerHTML = autoNumber;
-    document.getElementById('current2').innerHTML = currentCost2;
-    document.getElementById('grandma-cost').innerHTML = currentCost3;
+    console.log('I am updating')
+    document.getElementById('count').innerHTML = currentCookies; 
+    document.getElementById('amount').innerHTML = clickAmount;
+    document.getElementById('multiplier').innerHTML = currentMultiplier;
+    document.getElementById('current').innerHTML = multiCost;
+    document.getElementById('autonum').innerHTML = gnomeNumber;
+    document.getElementById('current2').innerHTML = gnomeCost;
+    document.getElementById('grandma-cost').innerHTML = grandmaCost;
     document.getElementById('grandmas').innerHTML = grandmaNumber;
-    document.getElementById('autocount').innerHTML = autoCount;
+    document.getElementById('autocount').innerHTML = gnomeCount;
     document.getElementById('grandmacount').innerHTML = grandmaCount;
-    document.getElementById('totalcount').innerHTML = totalCount;
+    document.getElementById('totalcount').innerHTML = totalProduced;
 
 }

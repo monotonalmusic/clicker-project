@@ -41,6 +41,13 @@ span {
 
 #reload {
     background-color: rosybrown;
+    opacity: .8;
+    transition: 1s ease;
+}
+
+#reload:hover {
+    opacity: .9;
+    transition: 1s ease;
 }
 
 #main {
@@ -159,8 +166,12 @@ span {
     border: inset 1px #654321;
 
 }
+#cookie {
+    opacity: .9;
+    transition: 1s ease;
 
+}
 #cookie:hover {
-    height: 220;
-    width: 220;
+    opacity: 1;
+    transition: 1s ease;
 }
